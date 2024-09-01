@@ -6,7 +6,7 @@ const App = () => {
   useEffect(() => {
     async function fetchnews() {
       let healthnews = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${apiKey}`
+        `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${apiKey}`
       );
       let final = await healthnews.json();
       console.log(final);
